@@ -2,7 +2,7 @@ using Zenject;
 
 namespace Installers
 {
-    public class MetaInstaller : MonoInstaller
+    public class GameSceneInstaller : MonoInstaller
     {
         
     }
