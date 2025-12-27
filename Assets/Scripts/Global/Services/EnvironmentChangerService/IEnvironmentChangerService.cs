@@ -1,4 +1,4 @@
-namespace Global.Services.Interfaces
+namespace Global.Services.EnvironmentChangerService
 {
     public class IEnvironmentChangerService
     {

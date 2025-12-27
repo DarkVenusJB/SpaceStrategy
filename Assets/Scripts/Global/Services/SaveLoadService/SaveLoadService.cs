@@ -1,4 +1,4 @@
-namespace Global.Services
+namespace Global.Services.SaveLoadService
 {
     public class SaveLoadService
     {

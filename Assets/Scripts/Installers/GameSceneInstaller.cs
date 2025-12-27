@@ -1,4 +1,5 @@
 using Game.Services;
+using Game.Services.TickService;
 using Zenject;
 
 namespace Installers

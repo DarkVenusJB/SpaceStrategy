@@ -1,4 +1,7 @@
 using Global.Services;
+using Global.Services.EnvironmentChangerService;
+using Global.Services.SaveLoadService;
+using Global.Services.SceneLoaderService;
 using Zenject;
 
 namespace Installers
