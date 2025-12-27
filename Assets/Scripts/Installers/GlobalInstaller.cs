@@ -15,7 +15,9 @@ namespace Installers
 
         private void InstallServices()
         {
-            Container.BindInterfacesAndSelfTo<EnvironmentChangerService>().AsSingle();
+            Container.BindInterfacesAndSelfTo<EnvironmentChangerService>().AsSingle()
+                .WithArguments(EEnvironmentType.Default);
+            
             Container.Bind<SceneLoaderService>().AsSingle();
             Container.Bind<SaveLoadService>().AsSingle();
         }
