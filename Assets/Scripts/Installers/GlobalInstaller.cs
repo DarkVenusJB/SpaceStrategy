@@ -12,7 +12,6 @@ namespace Installers
 
         private void InstallServices()
         {
-            Container.BindInterfacesAndSelfTo<TickService>().AsSingle();
             Container.BindInterfacesAndSelfTo<EnvironmentChangerService>().AsSingle();
             Container.Bind<SceneLoaderService>().AsSingle();
             Container.Bind<SaveLoadService>().AsSingle();

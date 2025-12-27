@@ -1,4 +1,4 @@
-namespace Global.Services.Interfaces
+namespace Game.Services.Interfaces
 {
     public class ITickService
     {

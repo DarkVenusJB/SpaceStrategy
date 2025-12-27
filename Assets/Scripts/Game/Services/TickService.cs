@@ -1,6 +1,7 @@
+using Game.Services.Interfaces;
 using Global.Services.Interfaces;
 
-namespace Global.Services
+namespace Game.Services
 {
     public class TickService : ITickService
     {
