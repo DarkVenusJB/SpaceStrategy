@@ -1,7 +1,7 @@
 namespace Global.Services.EnvironmentChangerService
 {
-    public class IEnvironmentChangerService
+    public interface IEnvironmentChangerService
     {
-        
+        void SetEnvironment(EEnvironmentType environment);
     }
 }

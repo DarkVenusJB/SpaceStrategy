@@ -9,7 +9,7 @@ namespace Utils
         private static TestUtilsHandler _instance;
         
         [Header("Debug Logs enable")] 
-        public bool EnvironmentChangerServiceEnabled;
+        public bool EnvironmentChangerServiceLog;
         
         public void DebugMessageShow(
             ELogSource logSource, 

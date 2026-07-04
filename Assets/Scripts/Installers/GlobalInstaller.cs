@@ -1,7 +1,7 @@
 using Global.Services;
 using Global.Services.EnvironmentChangerService;
 using Global.Services.SaveLoadService;
-using Global.Services.SceneLoaderService;
+using UnityEngine;
 using Zenject;
 
 namespace Installers
@@ -10,15 +10,14 @@ namespace Installers
     {
         public override void InstallBindings()
         {
+            Debug.Log("n");
             InstallServices();
         }
 
         private void InstallServices()
         {
             Container.BindInterfacesAndSelfTo<EnvironmentChangerService>().AsSingle()
-                .WithArguments(EEnvironmentType.Default);
-            
-            Container.Bind<SceneLoaderService>().AsSingle();
+                .WithArguments(EEnvironmentType.StartScene).NonLazy();
             Container.Bind<SaveLoadService>().AsSingle();
         }
     }
