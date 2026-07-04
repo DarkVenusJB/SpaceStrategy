@@ -100,3 +100,5 @@ InitTestScene*.unity*
 
 # JetBrains Rider / IntelliJ
 .idea/
+.continue/
+*.md
