@@ -1,6 +1,7 @@
 using Global.Services.WindowProviderService;
 using LitMotion;
 using LitMotion.Extensions;
+using TMPro;
 using UnityEngine;
 
 namespace Global.Windows.LoadingWindow
@@ -8,6 +9,7 @@ namespace Global.Windows.LoadingWindow
     public class LoadingWindow : WindowViewBase<LoadingWindowPresenter>
     {
         [SerializeField] private Transform loadingIcon;
+        [SerializeField] private TMP_Text versionText;
         [SerializeField] private float duration = 1f;
         [SerializeField] private Ease ease = Ease.Linear;
 
@@ -17,6 +19,8 @@ namespace Global.Windows.LoadingWindow
                 .WithEase(ease)
                 .WithLoops(-1)
                 .BindToLocalEulerAnglesZ(loadingIcon);
+
+            versionText.text = $"version :{Application.version}";
         }
     }
 }

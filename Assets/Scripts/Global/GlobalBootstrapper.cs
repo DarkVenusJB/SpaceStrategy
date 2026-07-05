@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Global.Services.EnvironmentChangerService;
 using Global.Services.WindowProviderService;
 using Global.Windows.LoadingWindow;
+using Global.Windows.MainMenuWindow;
 using UnityEngine;
 using Zenject;
 
@@ -34,6 +35,7 @@ namespace Global
             await UniTask.Delay(TimeSpan.FromSeconds(fakeLoadingTime));
             await _environmentChangerService.SetEnvironment(EEnvironmentType.MetaScene);
             
+            _windowProviderService.ShowWindow<MainMenuWindowPresenter>().Forget();
             _windowProviderService.CloseWindow<LoadingWindowPresenter>();
         }
     }

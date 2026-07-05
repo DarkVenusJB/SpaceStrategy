@@ -12,8 +12,8 @@ TagManager:
   - Water
   - UI
   - CoreSceneWindowsHandler
-  - 
-  - 
+  - GameSceneWindowsHandler
+  - MetaScenesWindowsHandler
   - 
   - 
   - 

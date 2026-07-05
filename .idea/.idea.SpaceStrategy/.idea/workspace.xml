@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613e299e-cef5-492e-8fa7-83c4abfd507a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Windows/MainMenuWindow/MainMenuWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Windows/MainMenuWindow/MainMenuWindowPresenter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceStrategy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceStrategy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MetaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MetaScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Windows/LoadingWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Windows/LoadingWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Windows/LoadingWindow.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Windows/LoadingWindow.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/GlobalBootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/GlobalBootstrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/IEnvironmentChangerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/IEnvironmentChangerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/CoreSceneWindowsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/CoreSceneWindowsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/GameSceneWindowsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/GameSceneWindowsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/MetaSceneWindowsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/MetaSceneWindowsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowViewBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowViewBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GlobalInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GlobalInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Windows/LoadingWindow/LoadingWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Windows/LoadingWindow/LoadingWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +30,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/ViewDataBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Windows/LoadingWindow/LoadingWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Windows/LoadingWindow/LoadingWindowPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Windows/MainMenuWindow/MainMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Windows/MainMenuWindow/MainMenuWindowPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@a85b92a8e443/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -107,15 +105,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8368">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8368" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -144,7 +140,8 @@
       <workItem from="1778336680663" duration="1762000" />
       <workItem from="1778349977111" duration="448000" />
       <workItem from="1783156077653" duration="3615000" />
-      <workItem from="1783235646345" duration="4399000" />
+      <workItem from="1783235646345" duration="5669000" />
+      <workItem from="1783241599353" duration="2783000" />
     </task>
     <servers />
   </component>
@@ -279,19 +276,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/GlobalBootstrapper.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\GlobalBootstrapper.cs" containingFunctionPresentation="Method 'StartGameAsync'">
-            <startOffsets>
-              <option value="1086" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1147" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowPresenterBase.cs</url>
