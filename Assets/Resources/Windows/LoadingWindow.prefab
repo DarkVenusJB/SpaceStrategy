@@ -214,3 +214,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Global.Windows.LoadingWindow.LoadingWindow
   _baseWindowAnimator: {fileID: 0}
+  loadingIcon: {fileID: 4160136806128251567}

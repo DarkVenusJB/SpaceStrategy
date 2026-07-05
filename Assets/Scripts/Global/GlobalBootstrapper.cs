@@ -31,8 +31,8 @@ namespace Global
             
             _windowProviderService.ShowWindow<LoadingWindowPresenter>().Forget();
             
-            await _environmentChangerService.SetEnvironment(EEnvironmentType.MetaScene);
             await UniTask.Delay(TimeSpan.FromSeconds(fakeLoadingTime));
+            await _environmentChangerService.SetEnvironment(EEnvironmentType.MetaScene);
             
             _windowProviderService.CloseWindow<LoadingWindowPresenter>();
         }
