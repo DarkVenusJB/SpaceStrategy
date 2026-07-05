@@ -15,8 +15,6 @@ namespace Global.Services.EnvironmentChangerService
 
             if (SceneManager.GetActiveScene().name != initialEnvironment.ToString())
                 throw new Exception("Runtime can be started only from StartScene");
-            
-            SetEnvironment(EEnvironmentType.MetaScene);
         }
 
         public void  SetEnvironment(EEnvironmentType environment)

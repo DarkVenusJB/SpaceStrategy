@@ -35,11 +35,10 @@ namespace Global.Services.WindowProviderService
             string windowPresenterTypeName = typeof(TPresenter).Name;
             string windowName = windowPresenterTypeName.Replace("Presenter", "");
             
-            Type windowPresenterType = typeof(TPresenter);
-
+            
             if (!_pesenters.ContainsKey(windowPresenterTypeName))
             {
-                var presenter = (TPresenter)Activator.CreateInstance(windowPresenterType);
+                var presenter = _diContainer.Instantiate<TPresenter>();
 
                 GameObject windowViewPrefab = Resources.Load<GameObject>("Windows/" + windowName);
                 
