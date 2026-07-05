@@ -33,12 +33,14 @@ namespace Global.Services.WindowProviderService
             
             transform.SetAsLastSibling();
             
-            _baseWindowAnimator.SetTrigger("Show");
+            if(_baseWindowAnimator)
+                _baseWindowAnimator.SetTrigger("Show");
         }
 
         protected virtual void Close()
         {
-            _baseWindowAnimator.SetTrigger("Close");
+            if(_baseWindowAnimator)
+                _baseWindowAnimator.SetTrigger("Close");
         }
 
         public virtual void OnShowAnimationEnd()
