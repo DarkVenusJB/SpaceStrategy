@@ -60,13 +60,16 @@ namespace Global.Services.WindowProviderService
         {
             switch (LayerMask.LayerToName(windowViewPrefab.layer))
             {
+                case "CoreSceneWindowsHandler":
+                    return CoreSceneWindowsHandler.Instance.transform;
                 case "GameSceneWindowsHandler":
                     return GameSceneWindowsHandler.Instance.transform;
                 case "MetaScenesWindowsHandler":
                     return MetaSceneWindowsHandler.Instance.transform;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
             
-            return CoreSceneWindowsHandler.Instance.transform;
         }
 
         public void CloseWindow<TPresenter>() where TPresenter : WindowPresenterBase

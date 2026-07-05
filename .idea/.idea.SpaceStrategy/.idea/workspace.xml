@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613e299e-cef5-492e-8fa7-83c4abfd507a" name="Changes" comment="" />
+    <list default="true" id="613e299e-cef5-492e-8fa7-83c4abfd507a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceStrategy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceStrategy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MetaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MetaScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/GlobalBootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/GlobalBootstrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/IEnvironmentChangerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/IEnvironmentChangerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/CoreSceneWindowsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/CoreSceneWindowsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/GameSceneWindowsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/GameSceneWindowsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/MetaSceneWindowsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/MetaSceneWindowsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowViewBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowViewBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GlobalInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GlobalInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +31,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/ViewDataBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Windows/LoadingWindow/LoadingWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/Windows/LoadingWindow/LoadingWindowPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@a85b92a8e443/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -90,13 +107,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8368">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8368" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -125,6 +144,7 @@
       <workItem from="1778336680663" duration="1762000" />
       <workItem from="1778349977111" duration="448000" />
       <workItem from="1783156077653" duration="3615000" />
+      <workItem from="1783235646345" duration="4399000" />
     </task>
     <servers />
   </component>
@@ -158,42 +178,159 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs</url>
-          <line>15</line>
+          <line>17</line>
           <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\EnvironmentChangerService\EnvironmentChangerService.cs" containingFunctionPresentation="Constructor 'EnvironmentChangerService'">
             <startOffsets>
-              <option value="454" />
+              <option value="507" />
             </startOffsets>
             <endOffsets>
-              <option value="526" />
+              <option value="579" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs</url>
-          <line>16</line>
+          <line>18</line>
           <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\EnvironmentChangerService\EnvironmentChangerService.cs" containingFunctionPresentation="Constructor 'EnvironmentChangerService'">
             <startOffsets>
-              <option value="543" />
+              <option value="596" />
             </startOffsets>
             <endOffsets>
-              <option value="610" />
+              <option value="663" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/EnvironmentChangerService/EnvironmentChangerService.cs</url>
-          <line>13</line>
+          <line>15</line>
           <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\EnvironmentChangerService\EnvironmentChangerService.cs" containingFunctionPresentation="Constructor 'EnvironmentChangerService'">
             <startOffsets>
-              <option value="400" />
+              <option value="453" />
             </startOffsets>
             <endOffsets>
-              <option value="440" />
+              <option value="493" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs</url>
+          <line>60</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowProviderService.cs" containingFunctionPresentation="Method 'GetWindowHandler'">
+            <startOffsets>
+              <option value="2322" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2376" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowProviderService.cs" containingFunctionPresentation="Method 'GetWindowHandler'">
+            <startOffsets>
+              <option value="2459" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2509" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs</url>
+          <line>65</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowProviderService.cs" containingFunctionPresentation="Method 'GetWindowHandler'">
+            <startOffsets>
+              <option value="2578" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2628" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs</url>
+          <line>69</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowProviderService.cs" containingFunctionPresentation="Method 'GetWindowHandler'">
+            <startOffsets>
+              <option value="2794" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2834" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowProviderService.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowProviderService.cs" containingFunctionPresentation="Method 'GetWindowHandler'">
+            <startOffsets>
+              <option value="2698" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2748" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/GlobalBootstrapper.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\GlobalBootstrapper.cs" containingFunctionPresentation="Method 'StartGameAsync'">
+            <startOffsets>
+              <option value="1086" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1147" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowPresenterBase.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowPresenterBase.cs" containingFunctionPresentation="Method 'CloseWindow'">
+            <startOffsets>
+              <option value="773" />
+            </startOffsets>
+            <endOffsets>
+              <option value="788" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowPresenterBase.cs</url>
+          <line>34</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowPresenterBase.cs" containingFunctionPresentation="Method 'CloseWindow'">
+            <startOffsets>
+              <option value="805" />
+            </startOffsets>
+            <endOffsets>
+              <option value="812" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Global/Services/WindowProviderService/WindowPresenterBase.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\UnityProjects\SpaceStrategy\Assets\Scripts\Global\Services\WindowProviderService\WindowPresenterBase.cs" containingFunctionPresentation="Method 'CloseWindow'">
+            <startOffsets>
+              <option value="838" />
+            </startOffsets>
+            <endOffsets>
+              <option value="856" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

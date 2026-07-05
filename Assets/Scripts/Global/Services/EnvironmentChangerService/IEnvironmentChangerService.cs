@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
+
 namespace Global.Services.EnvironmentChangerService
 {
     public interface IEnvironmentChangerService
     {
-        void SetEnvironment(EEnvironmentType environment);
+        UniTask SetEnvironment(EEnvironmentType environment);
     }
 }

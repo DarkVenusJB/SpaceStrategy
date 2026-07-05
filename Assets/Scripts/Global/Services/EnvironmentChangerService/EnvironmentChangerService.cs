@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
 
@@ -17,7 +19,7 @@ namespace Global.Services.EnvironmentChangerService
                 throw new Exception("Runtime can be started only from StartScene");
         }
 
-        public void  SetEnvironment(EEnvironmentType environment)
+        public async UniTask SetEnvironment(EEnvironmentType environment)
         {
             CurrentEnvironment = environment;
 
@@ -25,18 +27,23 @@ namespace Global.Services.EnvironmentChangerService
 
             if (currentScene.name == CurrentEnvironment.ToString())
             {
-                TestUtilsHandler.Instance.DebugMessageShow(TestUtilsHandler.ELogSource.EnvironmentChangerService,"Changing environment", 
+                TestUtilsHandler.Instance.DebugMessageShow(TestUtilsHandler.ELogSource.EnvironmentChangerService,
+                    "Changing environment",
                     TestUtilsHandler.ELogColor.Red, $"environment {CurrentEnvironment} already loaded");
                 return;
             }
 
-            if(currentScene.name != nameof(EEnvironmentType.StartScene))
-                SceneManager.UnloadSceneAsync(currentScene);
+            var tasks = new List<UniTask>();
+
+            if (currentScene.name != nameof(EEnvironmentType.StartScene))
+                tasks.Add(SceneManager.UnloadSceneAsync(currentScene).ToUniTask());
             
-            SceneManager.LoadSceneAsync(CurrentEnvironment.ToString(), LoadSceneMode.Additive);
+            tasks.Add(SceneManager.LoadSceneAsync(CurrentEnvironment.ToString(), LoadSceneMode.Additive).ToUniTask());
+
+            await UniTask.WhenAll(tasks);
             
-            
-            TestUtilsHandler.Instance.DebugMessageShow(TestUtilsHandler.ELogSource.EnvironmentChangerService,"Changing environment", 
+            TestUtilsHandler.Instance.DebugMessageShow(TestUtilsHandler.ELogSource.EnvironmentChangerService,
+                "Changing environment",
                 TestUtilsHandler.ELogColor.Pink, $"new environment {CurrentEnvironment}");
         }
     }

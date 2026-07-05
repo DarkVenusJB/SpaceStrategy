@@ -5,8 +5,6 @@ namespace Global.Services.WindowProviderService
 {
     public class CoreSceneWindowsHandler : MonoBehaviour
     {
-        [SerializeField] private CanvasScaler _canvasScaler;
-        
         public static CoreSceneWindowsHandler Instance => GetInstance();
         private static CoreSceneWindowsHandler _instance;
 

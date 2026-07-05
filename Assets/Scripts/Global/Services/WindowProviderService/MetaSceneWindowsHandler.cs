@@ -5,8 +5,6 @@ namespace Global.Services.WindowProviderService
 {
     public class MetaSceneWindowsHandler : MonoBehaviour
     {
-        [SerializeField] private CanvasScaler _canvasScaler;
-        
         public static MetaSceneWindowsHandler Instance => GetInstance();
         private static MetaSceneWindowsHandler _instance;
 

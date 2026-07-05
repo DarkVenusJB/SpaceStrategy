@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &367449477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367449479}
+  - component: {fileID: 367449478}
+  m_Layer: 0
+  m_Name: GlobalBootstraper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &367449478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367449477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d69ed3d98a9425280e6b69f3a0b04b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Global.GlobalBootstrapper
+  fakeLoadingTime: 3
+--- !u!4 &367449479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367449477}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.65871, y: 1.38291, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +271,7 @@ Camera:
   field of view: 34
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 100
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -267,6 +312,7 @@ GameObject:
   - component: {fileID: 664397963}
   - component: {fileID: 664397962}
   - component: {fileID: 664397964}
+  - component: {fileID: 664397965}
   m_Layer: 5
   m_Name: MetaScenesWindowsHandler
   m_TagString: Untagged
@@ -328,6 +374,18 @@ Canvas:
   m_SortingLayerID: -1741892347
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &664397965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664397961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729520ae405046f488732e16d2ea9d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Global.Services.WindowProviderService.MetaSceneWindowsHandler
 --- !u!1 &989296800
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +397,7 @@ GameObject:
   - component: {fileID: 989296803}
   - component: {fileID: 989296802}
   - component: {fileID: 989296801}
+  - component: {fileID: 989296804}
   m_Layer: 5
   m_Name: GameSceneWindowsHandler
   m_TagString: Untagged
@@ -400,6 +459,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &989296804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989296800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9255af0e3c49d0a7adf440ea717dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Global.Services.WindowProviderService.GameSceneWindowsHandler
 --- !u!1 &1519189425
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +482,8 @@ GameObject:
   - component: {fileID: 1519189427}
   - component: {fileID: 1519189426}
   - component: {fileID: 1519189428}
-  m_Layer: 5
+  - component: {fileID: 1519189429}
+  m_Layer: 6
   m_Name: CoreSceneWindowsHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,6 +544,18 @@ Canvas:
   m_SortingLayerID: 1179960953
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1519189429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519189425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c044bdeb370d47fbb8e925c67812a089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Global.Services.WindowProviderService.CoreSceneWindowsHandler
 --- !u!1 &1931649533
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb63bbe65cce4361a603789c5ab4f779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnvironmentChangerServiceEnabled: 1
+  EnvironmentChangerServiceLog: 0
 --- !u!4 &2137237866
 Transform:
   m_ObjectHideFlags: 0
@@ -670,3 +754,4 @@ SceneRoots:
   - {fileID: 664397963}
   - {fileID: 2137237866}
   - {fileID: 1931649535}
+  - {fileID: 367449479}

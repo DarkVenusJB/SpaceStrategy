@@ -9,6 +9,9 @@ namespace Global.Services.WindowProviderService
         
         protected TWindowPresenter _presenter;
         
+        private static readonly int ShowTrigger = Animator.StringToHash("Show");
+        private static readonly int CloseTrigger = Animator.StringToHash("Close");
+        
         public void SetPresenter(TWindowPresenter presenter)
         {
             _presenter = presenter;
@@ -32,15 +35,24 @@ namespace Global.Services.WindowProviderService
             gameObject.SetActive(true);
             
             transform.SetAsLastSibling();
-            
-            if(_baseWindowAnimator)
-                _baseWindowAnimator.SetTrigger("Show");
+
+            if (_baseWindowAnimator)
+                _baseWindowAnimator.SetTrigger(ShowTrigger);
+            else
+                _presenter.IsShowAnimationNow = false;
         }
 
         protected virtual void Close()
         {
-            if(_baseWindowAnimator)
-                _baseWindowAnimator.SetTrigger("Close");
+            if (_baseWindowAnimator)
+            {
+                _baseWindowAnimator.SetTrigger(CloseTrigger);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+                _presenter.SetInNotShowing();
+            }
         }
 
         public virtual void OnShowAnimationEnd()
