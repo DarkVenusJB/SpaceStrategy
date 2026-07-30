@@ -206,7 +206,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1539007580}
   - component: {fileID: 1539007579}
-  - component: {fileID: 1539007578}
   - component: {fileID: 1539007581}
   m_Layer: 0
   m_Name: Meta Camera
@@ -215,14 +214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1539007578
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539007577}
-  m_Enabled: 1
 --- !u!20 &1539007579
 Camera:
   m_ObjectHideFlags: 0

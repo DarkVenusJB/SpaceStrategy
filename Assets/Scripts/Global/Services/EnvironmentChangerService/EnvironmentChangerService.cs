@@ -1,50 +1,117 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Utils;
 
 namespace Global.Services.EnvironmentChangerService
 {
     public class EnvironmentChangerService : IEnvironmentChangerService
     {
+        private const string BootstrapSceneName = "StartScene";
+
+        private readonly SemaphoreSlim _transitionLock = new(1, 1);
+        private readonly HashSet<string> _loadedEnvironmentScenes = new();
+
         public EEnvironmentType CurrentEnvironment { get; private set; }
 
         public EnvironmentChangerService(EEnvironmentType initialEnvironment)
         {
-            CurrentEnvironment = initialEnvironment;
+            var activeScene = SceneManager.GetActiveScene();
+            
+            if (!activeScene.IsValid() || activeScene.name != BootstrapSceneName)
+                throw new InvalidOperationException($"{BootstrapSceneName} must always be loaded.");
 
-            if (SceneManager.GetActiveScene().name != initialEnvironment.ToString())
-                throw new Exception("Runtime can be started only from StartScene");
+            CurrentEnvironment = initialEnvironment;
         }
 
         public async UniTask SetEnvironment(EEnvironmentType environment)
         {
-            CurrentEnvironment = environment;
+            await _transitionLock.WaitAsync();
 
-            var currentScene = SceneManager.GetActiveScene();
-
-            if (currentScene.name == CurrentEnvironment.ToString())
+            try
             {
-                TestUtilsHandler.Instance.DebugMessageShow(TestUtilsHandler.ELogSource.EnvironmentChangerService,
-                    "Changing environment",
-                    TestUtilsHandler.ELogColor.Red, $"environment {CurrentEnvironment} already loaded");
-                return;
+                await SetEnvironmentInternal(environment);
+            }
+            finally
+            {
+                _transitionLock.Release();
+            }
+        }
+
+        private async UniTask SetEnvironmentInternal(EEnvironmentType environment)
+        {
+            var targetSceneName = GetSceneName(environment);
+            var targetScene = SceneManager.GetSceneByName(targetSceneName);
+
+            if (!targetScene.isLoaded)
+            {
+                if (!Application.CanStreamedLevelBeLoaded(targetSceneName))
+                {
+                    throw new InvalidOperationException($"Scene '{targetSceneName}' is not available in Build Settings.");
+                }
+
+                var loadOperation = SceneManager.LoadSceneAsync(targetSceneName, LoadSceneMode.Additive);
+
+                if (loadOperation == null)
+                {
+                    throw new InvalidOperationException($"Failed to start loading scene {targetSceneName}.");
+                }
+
+                await loadOperation.ToUniTask();
+
+                targetScene = SceneManager.GetSceneByName(targetSceneName);
             }
 
-            var tasks = new List<UniTask>();
+            if (!targetScene.IsValid() || !targetScene.isLoaded)
+                throw new InvalidOperationException($"Scene '{targetSceneName}' was not loaded.");
 
-            if (currentScene.name != nameof(EEnvironmentType.StartScene))
-                tasks.Add(SceneManager.UnloadSceneAsync(currentScene).ToUniTask());
+            _loadedEnvironmentScenes.Add(targetSceneName);
             
-            tasks.Add(SceneManager.LoadSceneAsync(CurrentEnvironment.ToString(), LoadSceneMode.Additive).ToUniTask());
+            if (!SceneManager.SetActiveScene(targetScene))
+                throw new InvalidOperationException($"Failed to make scene {targetSceneName} active.");
 
-            await UniTask.WhenAll(tasks);
-            
-            TestUtilsHandler.Instance.DebugMessageShow(TestUtilsHandler.ELogSource.EnvironmentChangerService,
-                "Changing environment",
-                TestUtilsHandler.ELogColor.Pink, $"new environment {CurrentEnvironment}");
+            CurrentEnvironment = environment;
+
+            await UnloadTrackedScenesExcept(targetSceneName);
+
+            Debug.Log($"Environment changed to {CurrentEnvironment}. Active scene: {targetScene.name}");
+        }
+
+        private async UniTask UnloadTrackedScenesExcept(string activeEnvironmentScene)
+        {
+            var scenesToCheck = new List<string>(_loadedEnvironmentScenes);
+
+            foreach (var sceneName in scenesToCheck)
+            {
+                if (sceneName == activeEnvironmentScene)
+                    continue;
+
+                var scene = SceneManager.GetSceneByName(sceneName);
+
+                if (!scene.IsValid() || !scene.isLoaded)
+                {
+                    _loadedEnvironmentScenes.Remove(sceneName);
+                    continue;
+                }
+
+                var unloadOperation = SceneManager.UnloadSceneAsync(scene);
+
+                if (unloadOperation != null)
+                {
+                    await unloadOperation.ToUniTask();
+                    _loadedEnvironmentScenes.Remove(sceneName);
+                }
+            }
+        }
+
+        private static string GetSceneName(EEnvironmentType environment)
+        {
+            if (environment == EEnvironmentType.StartScene)
+                throw new ArgumentOutOfRangeException(nameof(environment), environment, "StartScene is not an environment.");
+
+            return environment.ToString();
         }
     }
 }
